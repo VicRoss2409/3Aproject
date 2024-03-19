@@ -1,0 +1,99 @@
+#include<Servo.h>
+
+//décla varibales joystick
+const int pinX = A0;
+const int pinY = A1;
+int boutonStateAv = 1;
+int boutonStateAr = 2;
+int boutonStateDr = 3;
+int boutonStateGa = 4;
+float pot = 6;
+float vitesse =0;
+int Avant = 0;
+int Arriere = 0;
+int Droite = 0;
+int Gauche = 0;
+
+
+//décla variables moteur
+Servo ESC1;
+Servo ESC2;
+Servo ESC3;
+Servo ESC4;
+
+
+void setup() {
+
+   //on active la résistance pull up 
+  Serial.begin(9600);
+  //ESC gauche
+  ESC1.attach(11, 1000, 2000); // ESC attaché au pin5, avec des pic de courant de 1000 à 2000
+  ESC2.attach(1, 1000, 2000);
+  ESC3.attach(8, 1000, 2000);
+  ESC4.attach(7, 1000, 2000);
+
+  pinMode(boutonStateAv,INPUT);
+  pinMode(boutonStateAr,INPUT);
+  pinMode(boutonStateDr,INPUT);
+  pinMode(boutonStateGa,INPUT);
+  pinMode(pot,INPUT);
+
+}
+ 
+void loop() {
+  int X = 0;
+  int Y = 0;
+  
+  //on lit les valeurs
+  X = analogRead(pinX);
+  X = map(X, 0, 1023, 0, 180);
+      
+  Y = analogRead(pinY);
+  Y = map(Y, 0, 1023, 0, 180);
+  
+  vitesse = analogRead(pot);
+  Avant=digitalRead(boutonStateAv);
+  Arriere=digitalRead(boutonStateAr);
+  Droite=digitalRead(boutonStateDr);
+  Gauche=digitalRead(boutonStateGa);
+
+
+if (boutonStateAv == LOW) {     // Button is pushed when LOW, not HIGH
+    
+    ESC1.write(vitesse);
+    ESC2.write(vitesse);
+    ESC3.write(-vitesse);
+    ESC4.write(-vitesse);
+      
+  }
+if (boutonStateAr == LOW) {     // Button is pushed when LOW, not HIGH
+    // turn LED on:
+    ESC1.write(-vitesse);
+    ESC2.write(-vitesse);
+    ESC3.write(vitesse);
+    ESC4.write(vitesse);
+}
+if (boutonStateDr == LOW) {     // Button is pushed when LOW, not HIGH
+    // turn LED on:
+    ESC1.write(vitesse);
+    ESC2.write(90);
+    ESC3.write(90);
+    ESC4.write(vitesse);
+}
+if (boutonStateGa == LOW) {     // Button is pushed when LOW, not HIGH
+    // turn LED on:
+    ESC1.write(90);
+    ESC2.write(vitesse);
+    ESC3.write(vitesse);
+    ESC4.write(90);
+}
+  else {
+    // turn LED off:
+    ESC1.write(90);
+    ESC2.write(90);
+    ESC3.write(90);
+    ESC4.write(90);  
+  }
+
+ 
+}
