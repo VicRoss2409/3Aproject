@@ -8,4 +8,4 @@ This folder contains photos and visual materials related to the NEMO underwater 
 - Diagrams and technical illustrations
 - Banner images for documentation and GitHub
 
-![NEMO ROV Banner](Photos/n.PNG)
+![NEMO ROV Banner](n.PNG)
