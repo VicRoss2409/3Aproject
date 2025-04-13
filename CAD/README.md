@@ -1,5 +1,5 @@
 
-![Banner](Photos/n.png)
+![Banner](Photos/n.PNG)
 # CAD Files
 
 This folder contains the 3D design files for the NEMO underwater robot. All parts were modeled using Fusion 360 and exported in STL format for 3D printing.
