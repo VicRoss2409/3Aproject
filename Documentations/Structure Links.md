@@ -25,7 +25,6 @@ They were used throughout the project for:
 - [QGroundControl – Ground Station Software](https://docs.qgroundcontrol.com/en/)
 - [Pixhawk Motor Mapping for ROVs](https://www.ardusub.com/reference/frame-definitions.html)
 - [ArduSub Parameter Reference](https://www.ardusub.com/developers/full-parameter-list.html)
-- [Calibrating ESCs with ArduSub](https://www.ardusub.com/reference/esc-calibration.html)
 
 ---
 
