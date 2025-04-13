@@ -1,0 +1,15 @@
+# 🌐 Web Resources & References
+
+This folder contains a curated selection of useful web resources and documentation links that have supported the development of the NEMO underwater robot. These references include tutorials, component datasheets, design inspirations, technical documentation for the Pixhawk and ArduSub ecosystem, and underwater robotics best practices.
+
+They were used throughout the project for:
+- Mechanical and electronic design decisions
+- Underwater motor selection and ESC setup
+- ArduSub configuration and Pixhawk calibration
+- Waterproofing techniques and ROV assembly guidelines
+
+- [BlueROV2 Assembly Guide – BlueRobotics](https://bluerobotics.com/learn/bluerov2-assembly/)
+- [Pixhawk Documentation – ArduSub](https://www.ardusub.com/introduction/)
+- [SubConn Waterproof Connectors](https://www.macartney.com/what-we-offer/systems/wet-mate-connectors/subconn/)
+- [Brushless Motor Tutorial](https://youtu.be/CJOATX3r0Wo?si=egM10BITsuv9YJw7)
+
