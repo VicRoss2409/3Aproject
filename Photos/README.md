@@ -7,3 +7,5 @@ This folder contains photos and visual materials related to the NEMO underwater 
 - Renders from Fusion 360
 - Diagrams and technical illustrations
 - Banner images for documentation and GitHub
+
+![NEMO ROV Banner](Photos/n.jpg)
